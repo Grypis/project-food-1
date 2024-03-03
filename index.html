@@ -38,7 +38,7 @@
                     </li>
                 </ul>
             </nav>
-            <button type="button" class="main-btn">Order Now</button>
+            <button type="button" class="main-btn" data-modal-open>Order Now</button>
         </div>
     </header>
     <main>
@@ -84,7 +84,7 @@
                                 just a few clicks.</p>
                         </li>
                     </ul>
-                    <button type="button" class="main-btn offering-btn">Order Now<button>
+                    <button type="button" class="main-btn offering-btn">Order Now <button>
                 </div>
             </div>
         </section>
@@ -160,5 +160,46 @@
         <p>By subscribing you agree to with our<a href="">Privacy Policy</a></p>
         <p>2022 FoodSta. All right reserved.</p>
     </footer>
+    <div class="backdrop is-open" data-modal>
+        <div class="modal">
+            <button type="button" class="modal-close-btn" data-modal-close>
+                <svg class="modal-close-icon" 
+                    width="11" 
+                    height="11">
+                    <use href="./images/icons.svg#icon-cross"></use>
+                </svg>
+            </button>
+            <p class="modal-title">Order Form</p>
+            <form>
+                <div class="input-wrapper">
+                    <label for="user-name" class="modal-label">Name</label>
+                    <input type="text" class="modal-input" placeholder="Your name" id="user-name">
+                </div>
+                <div class="input-wrapper">
+                    <label for="phone" class="modal-label">Phone number</label>
+                    <input type="tel" class="modal-input" placeholder="+38(0_ _) _ _ _   _ _   _ _" id="phone">
+                </div>
+                <div class="input-wrapper">
+                    <label for="email" class="modal-label">E-mail</label>
+                    <input type="email" class="modal-input" placeholder="example@gmail.com" id="email">
+                </div>
+                <div class="input-wrapp">
+                    <input type="checkbox" name="user-check" class="check visually-hidden" id="user-check">
+                    <label for="user-check" class="input-check-text"> 
+                        <span class="checkbox"> 
+                            <svg class="check-icon" width="10" height="8">
+                                <use href="./images/icons.svg#icon-check"></use>
+                            </svg>
+                       </span>I accept the terms and conditions of the
+                        <a href="" class="check-link">Privacy Policy</a>
+                    </label>
+                </div>
+                <button class="modal-button" type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+    <script src="./js/modal.js">
+
+    </script>
 </body>
 </html>
